@@ -1,0 +1,10 @@
+docker pull analoglabs/timechain
+
+# Create directory
+mkdir -p $(pwd)/.analog
+
+# run
+docker run -d -p 9944:9944 -p 30303:30303 -v $(pwd)/.analog:/.analog --name analog analoglabs/timechain --base-path /.analog --rpc-external --rpc-methods=Unsafe --unsafe-rpc-external --name memewbasah (ganti make namamu itu memewbasah)
+
+# Check Logs
+docker logs analog
